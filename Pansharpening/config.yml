@@ -1,4 +1,3 @@
-Version : newton_new_2_wocru
 Task : Pansharpening
 
 
@@ -14,7 +13,7 @@ network :
   middle_blk_num : 1
   enc_blk_nums : [1,1]
   dec_blk_nums : [1,1]
-
+  u_transform: True
 
 datasets :
   GF2:

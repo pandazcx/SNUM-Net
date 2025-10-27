@@ -1,6 +1,4 @@
-Version : newton_3_1_fuloss
-Task : TDSR
-
+Task : GTSR
 
 network :
   in_dim : 1
@@ -14,13 +12,13 @@ network :
   middle_blk_num : 4
   enc_blk_nums : [1,2]
   dec_blk_nums : [2,1]
-
+  u_transform: True
 
 datasets :
-  path : "/mnt/hdd0/zhangcx/Dataset/CIDIS/"
+  path : "/mnt/hdd0/zhangcx/Dataset/CIDIS_25/"
   patch_size : 256
-  batch_size : 1
-  aug_mode : 4
+  batch_size : 4
+  aug_mode : true
   use_shuffle: true
   scale : 16
 

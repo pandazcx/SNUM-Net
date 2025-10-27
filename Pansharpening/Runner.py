@@ -1,7 +1,6 @@
 from PIL import Image
 import cv2
 import time
-from importlib import import_module
 import torch.nn as nn
 from torch.utils.tensorboard import SummaryWriter
 import logging
@@ -22,6 +21,7 @@ import matplotlib.pyplot as plt
 sys.path.append("..")
 # from utils import *
 import Loss.loss as loss
+import network.model as Model
 
 
 def remove_module_dict(state_dict):
@@ -44,8 +44,8 @@ def make_model(args):
 
     with open(config_path, 'r') as f:
         config = yaml.load(f, Loader=yaml.FullLoader)
-    network = import_module("network." + config["Version"])
-    model = network.DeepMSN_Net(config["network"])
+    Train = True if args.mode == "train" else False
+    model = Model.SNUM_Net(config["network"], Train)
     return model,config
 
 

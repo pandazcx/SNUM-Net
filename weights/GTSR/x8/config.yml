@@ -1,0 +1,47 @@
+Task : TDSR
+
+
+network :
+  in_dim : 1
+  feature_dim : 16
+  y_dim : 3
+  depth : 8
+  ratio_spatial : 32
+  ratio_freq : 2
+  ratio_fusion : 1
+  control_nums : 4
+  middle_blk_num : 4
+  enc_blk_nums : [1,2]
+  dec_blk_nums : [2,1]
+  u_transform: False
+
+datasets :
+  path : "/mnt/hdd0/zhangcx/Dataset/CIDIS_25/"
+  patch_size : 256
+  batch_size : 1
+  aug_mode : True
+  use_shuffle: true
+  scale : 8
+
+train :
+  epoch : 3000
+  clip_grad : true
+  loss_type : mix3  #mix1\mix2\mse\Charbonnier
+
+  load :
+    inherit : False
+    model : gtsr_x8.pth
+
+  optim:
+    type : AdamW #AdamW
+    init_lr : !!float 3e-5
+    weight_decay : !!float 1e-4
+    final_lr : !!float 1e-5
+    betas : [0.9,0.95]
+    scheduler_type : linear #cosine
+
+save:
+  freq : 5000
+  auto_freq : 50
+
+val_freq: 5000

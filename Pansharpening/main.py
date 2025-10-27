@@ -39,7 +39,6 @@ def main(rank, world_size, args, port):
 
     reduce_test_sampler = DistributedSampler(dataset_reduce_test, num_replicas=world_size, rank=rank, shuffle=False)
     full_test_sampler = DistributedSampler(dataset_full_test, num_replicas=world_size, rank=rank, shuffle=False)
-    # full_test_sampler = DistributedSampler(dataset_reduce_test, num_replicas=world_size, rank=rank, shuffle=False)
 
 
 
@@ -47,8 +46,7 @@ def main(rank, world_size, args, port):
                                          sampler=reduce_test_sampler)
     test_full_loader = Data.DataLoader(dataset=dataset_full_test, num_workers=4, batch_size=1,
                                        sampler=full_test_sampler)
-    # test_full_loader = Data.DataLoader(dataset=dataset_reduce_test, num_workers=4, batch_size=1,
-    #                                    sampler=full_test_sampler)
+
 
     if args.mode == "train":
         dataset_train = Dataset.Dataset(train_data, img_scale=image_scale, train=True)

@@ -1,5 +1,4 @@
-Version : newton_t4
-Task : NYU_depth_SR
+Task : GDSR
 
 
 network :
@@ -14,6 +13,7 @@ network :
   middle_blk_num : 4
   enc_blk_nums : [1,2]
   dec_blk_nums : [2,1]
+  u_transform: True
 
 
 datasets :
