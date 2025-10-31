@@ -2,7 +2,7 @@
 
 The official pytorch implementation of the paper:
 
-Deep Semi-smooth Newton-driven Unfolding Network for Multi-modal Image Super-Resolution (TIP, 2025)
+[Deep Semi-smooth Newton-driven Unfolding Network for Multi-modal Image Super-Resolution (TIP, 2025)](https://ieeexplore.ieee.org/document/11222911)
 
 **Chenxiao Zhang**, **Xin Deng** **Jingyi Xu**, **Yongxuan Dou**, **Mai Xu**
 
@@ -137,16 +137,16 @@ python main.py -r -m test -p /mnt/hdd0/zhangcx/SNUM-Net-main/weights/GTSR/x16
 
 ### Citation
 <!-- If our work is useful for your research, please consider citing:
-```
-@ARTICLE{10820096,
-  author={Deng, Xin and Zhang, Chenxiao and Jiang, Lai and Xia, Jingyuan and Xu, Mai},
-  journal={IEEE Transactions on Pattern Analysis and Machine Intelligence}, 
-  title={DeepSN-Net: Deep Semi-Smooth Newton Driven Network for Blind Image Restoration}, 
+@ARTICLE{11222911,
+  author={Zhang, Chenxiao and Deng, Xin and Xu, Jingyi and Dou, Yongxuan and Xu, Mai},
+  journal={IEEE Transactions on Image Processing}, 
+  title={Deep Semi-smooth Newton-driven Unfolding Network for Multi-modal Image Super-Resolution}, 
   year={2025},
-  volume={47},
-  number={4},
-  pages={2632-2646},
-  doi={10.1109/TPAMI.2024.3525089}
+  volume={},
+  number={},
+  pages={1-1},
+  keywords={Multi-modal image super-resolution;Semi-smooth Newton;Deep unfolding network},
+  doi={10.1109/TIP.2025.3625429}}
   }
 ``` -->
 
