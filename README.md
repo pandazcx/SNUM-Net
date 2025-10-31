@@ -16,7 +16,7 @@ The official pytorch implementation of the paper:
 
 
 ## Demo on Multi-modal Image Super-resolution
-Please refer to our [paper]() for details.
+Please refer to our [paper](https://ieeexplore.ieee.org/document/11222911) for details.
 
 Our method won the fourth place in the [CVPR PBVS 2025](https://pbvs-workshop.github.io/challenge.html) Thermal Image Super-Resolution challenge (GTISRc) - Track2 scale x8. ([View the results](https://codalab.lisn.upsaclay.fr/competitions/21248#results))
 
